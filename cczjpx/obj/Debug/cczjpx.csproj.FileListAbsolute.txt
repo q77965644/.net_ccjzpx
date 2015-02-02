@@ -2,3 +2,8 @@ E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.dll
 E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.pdb
 E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.dll
 E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.pdb
+E:\cczjpx\cczjpx\bin\cczjpx.dll
+E:\cczjpx\cczjpx\bin\cczjpx.pdb
+E:\cczjpx\cczjpx\obj\Debug\cczjpx.csprojResolveAssemblyReference.cache
+E:\cczjpx\cczjpx\obj\Debug\cczjpx.dll
+E:\cczjpx\cczjpx\obj\Debug\cczjpx.pdb
