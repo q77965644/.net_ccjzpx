@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 
-namespace BookWeb
+namespace cczjpx
 {
 	// 注：使用 ScriptManager 要添加对 System.Web.Extensions 的引用。
 	public class ScriptHandler

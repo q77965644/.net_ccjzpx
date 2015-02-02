@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 //using Weixin.Library.Web.Handler;
 //using Weixin.Library.Model;
 
-namespace BookWeb
+namespace cczjpx
 {
 	public class WebHelper
 	{

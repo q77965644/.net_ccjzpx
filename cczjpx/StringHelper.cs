@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 //using Weixin.Library.Model;
 
-namespace BookWeb
+namespace cczjpx
 {
 	public class StringHelper
 	{

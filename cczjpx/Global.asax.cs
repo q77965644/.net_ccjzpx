@@ -7,7 +7,7 @@ using System.Web.SessionState;
 using System.Text.RegularExpressions;
 using System.Timers;
 
-namespace BookWeb
+namespace cczjpx
 {
     public class Global : System.Web.HttpApplication
     {

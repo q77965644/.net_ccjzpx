@@ -1,12 +1,4 @@
-E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.dll
-E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.pdb
-E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.dll
-E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.pdb
-<<<<<<< HEAD
-E:\cczjpx\cczjpx\bin\cczjpx.dll
-E:\cczjpx\cczjpx\bin\cczjpx.pdb
-E:\cczjpx\cczjpx\obj\Debug\cczjpx.csprojResolveAssemblyReference.cache
-E:\cczjpx\cczjpx\obj\Debug\cczjpx.dll
-E:\cczjpx\cczjpx\obj\Debug\cczjpx.pdb
-=======
->>>>>>> 263667a76889823b26484ad7d64769c8b397dcc5
+E:\.net_ccjzpx\cczjpx\bin\cczjpx.dll
+E:\.net_ccjzpx\cczjpx\bin\cczjpx.pdb
+E:\.net_ccjzpx\cczjpx\obj\Debug\cczjpx.dll
+E:\.net_ccjzpx\cczjpx\obj\Debug\cczjpx.pdb
