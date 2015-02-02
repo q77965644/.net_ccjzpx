@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF93B1DB-0572-49BA-B3FF-1C86C2891AFD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cczjpx</RootNamespace>
+    <AssemblyName>cczjpx</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ht\css\Basics.css" />
+    <Content Include="ht\css\blue.css" />
+    <Content Include="ht\css\brown.css" />
+    <Content Include="ht\css\dark.css" />
+    <Content Include="ht\css\eastern_blue.css" />
+    <Content Include="ht\css\green.css" />
+    <Content Include="ht\css\ie.css" />
+    <Content Include="ht\css\main.css" />
+    <Content Include="ht\css\place.css" />
+    <Content Include="ht\css\style.css" />
+    <Content Include="ht\css\tamarillo.css" />
+    <Content Include="ht\foot.aspx" />
+    <Content Include="ht\head.aspx" />
+    <Content Include="ht\images\1.png" />
+    <Content Include="ht\images\banner_right.png" />
+    <Content Include="ht\images\conbg.png" />
+    <Content Include="ht\images\con_r.png" />
+    <Content Include="ht\images\download.png" />
+    <Content Include="ht\images\footlogo.png" />
+    <Content Include="ht\images\gallery\Image01.jpg" />
+    <Content Include="ht\images\gallery\Image01_tn.jpg" />
+    <Content Include="ht\images\gallery\Image02.jpg" />
+    <Content Include="ht\images\gallery\Image02_tn.jpg" />
+    <Content Include="ht\images\gallery\Image03.jpg" />
+    <Content Include="ht\images\gallery\Image03_tn.jpg" />
+    <Content Include="ht\images\gallery\Image04.jpg" />
+    <Content Include="ht\images\gallery\Image04_tn.jpg" />
+    <Content Include="ht\images\gallery\Image05.jpg" />
+    <Content Include="ht\images\gallery\Image05_tn.jpg" />
+    <Content Include="ht\images\gallery\Image06.jpg" />
+    <Content Include="ht\images\gallery\Image06_tn.jpg" />
+    <Content Include="ht\images\gallery\Image07.jpg" />
+    <Content Include="ht\images\gallery\Image07_tn.jpg" />
+    <Content Include="ht\images\gallery\Image08.jpg" />
+    <Content Include="ht\images\gallery\Image08_tn.jpg" />
+    <Content Include="ht\images\gallery\Image09.jpg" />
+    <Content Include="ht\images\gallery\Image09_tn.jpg" />
+    <Content Include="ht\images\gallery\Image10.jpg" />
+    <Content Include="ht\images\gallery\Image10_tn.jpg" />
+    <Content Include="ht\images\gallery\Image11.jpg" />
+    <Content Include="ht\images\gallery\Image11_tn.jpg" />
+    <Content Include="ht\images\gallery\Image12.jpg" />
+    <Content Include="ht\images\gallery\Image12_tn.jpg" />
+    <Content Include="ht\images\gallery\Image13.jpg" />
+    <Content Include="ht\images\gallery\Image13_tn.jpg" />
+    <Content Include="ht\images\gallery\Image14.jpg" />
+    <Content Include="ht\images\gallery\Image14_tn.jpg" />
+    <Content Include="ht\images\gallery\Image15.jpg" />
+    <Content Include="ht\images\gallery\Image15_tn.jpg" />
+    <Content Include="ht\images\gallery\Image16.jpg" />
+    <Content Include="ht\images\gallery\Image16_tn.jpg" />
+    <Content Include="ht\images\gallery\Image17.jpg" />
+    <Content Include="ht\images\gallery\Image17_tn.jpg" />
+    <Content Include="ht\images\gallery\Image18.jpg" />
+    <Content Include="ht\images\gallery\Image18_tn.jpg" />
+    <Content Include="ht\images\gallery\Image19.jpg" />
+    <Content Include="ht\images\gallery\Image19_tn.jpg" />
+    <Content Include="ht\images\gallery\Image20.jpg" />
+    <Content Include="ht\images\gallery\Image20_tn.jpg" />
+    <Content Include="ht\images\gallery\Image21.jpg" />
+    <Content Include="ht\images\gallery\Image21_tn.jpg" />
+    <Content Include="ht\images\gallery\Image22.jpg" />
+    <Content Include="ht\images\gallery\Image22_tn.jpg" />
+    <Content Include="ht\images\gallery\Image23.jpg" />
+    <Content Include="ht\images\gallery\Image23_tn.jpg" />
+    <Content Include="ht\images\gallery\Image24.jpg" />
+    <Content Include="ht\images\gallery\Image24_tn.jpg" />
+    <Content Include="ht\images\gallery\Image25.jpg" />
+    <Content Include="ht\images\gallery\Image25_tn.jpg" />
+    <Content Include="ht\images\gallery\Image26.jpg" />
+    <Content Include="ht\images\gallery\Image26_tn.jpg" />
+    <Content Include="ht\images\gallery\Image27.jpg" />
+    <Content Include="ht\images\gallery\Image27_tn.jpg" />
+    <Content Include="ht\images\gallery\Image28.jpg" />
+    <Content Include="ht\images\gallery\Image28_tn.jpg" />
+    <Content Include="ht\images\gallery\Image29.jpg" />
+    <Content Include="ht\images\gallery\Image29_tn.jpg" />
+    <Content Include="ht\images\glyphicons-halflings-white.png" />
+    <Content Include="ht\images\glyphicons-halflings.png" />
+    <Content Include="ht\images\goonicon.gif" />
+    <Content Include="ht\images\img\acc_icons.png" />
+    <Content Include="ht\images\img\adt-icons.png" />
+    <Content Include="ht\images\img\ajax_loader.gif" />
+    <Content Include="ht\images\img\bg_a.png" />
+    <Content Include="ht\images\img\bg_b.png" />
+    <Content Include="ht\images\img\bg_c.png" />
+    <Content Include="ht\images\img\bg_d.png" />
+    <Content Include="ht\images\img\bg_e.png" />
+    <Content Include="ht\images\img\bullet_blue.png" />
+    <Content Include="ht\images\img\bullet_green.png" />
+    <Content Include="ht\images\img\bullet_orange.png" />
+    <Content Include="ht\images\img\bullet_red.png" />
+    <Content Include="ht\images\img\error_big.png" />
+    <Content Include="ht\images\img\external_link.png" />
+    <Content Include="ht\images\img\flags\flags.css" />
+    <Content Include="ht\images\img\flags\flags.png" />
+    <Content Include="ht\images\img\gCons\add-item.png" />
+    <Content Include="ht\images\img\gCons\addressbook.png" />
+    <Content Include="ht\images\img\gCons\agent.png" />
+    <Content Include="ht\images\img\gCons\apple.png" />
+    <Content Include="ht\images\img\gCons\arrow-round.png" />
+    <Content Include="ht\images\img\gCons\badge.png" />
+    <Content Include="ht\images\img\gCons\bar-chart-02.png" />
+    <Content Include="ht\images\img\gCons\bar-chart.png" />
+    <Content Include="ht\images\img\gCons\battery-full.png" />
+    <Content Include="ht\images\img\gCons\bird.png" />
+    <Content Include="ht\images\img\gCons\boat.png" />
+    <Content Include="ht\images\img\gCons\bookmark.png" />
+    <Content Include="ht\images\img\gCons\briefcase.png" />
+    <Content Include="ht\images\img\gCons\calculator.png" />
+    <Content Include="ht\images\img\gCons\calendar.png" />
+    <Content Include="ht\images\img\gCons\cassette.png" />
+    <Content Include="ht\images\img\gCons\chain.png" />
+    <Content Include="ht\images\img\gCons\chat-.png" />
+    <Content Include="ht\images\img\gCons\chat-02.png" />
+    <Content Include="ht\images\img\gCons\cloud-filled.png" />
+    <Content Include="ht\images\img\gCons\cloud-outline.png" />
+    <Content Include="ht\images\img\gCons\computer.png" />
+    <Content Include="ht\images\img\gCons\configuration.png" />
+    <Content Include="ht\images\img\gCons\configuration02.png" />
+    <Content Include="ht\images\img\gCons\connected.png" />
+    <Content Include="ht\images\img\gCons\connections.png" />
+    <Content Include="ht\images\img\gCons\container.png" />
+    <Content Include="ht\images\img\gCons\copy-item.png" />
+    <Content Include="ht\images\img\gCons\database.png" />
+    <Content Include="ht\images\img\gCons\delete-item.png" />
+    <Content Include="ht\images\img\gCons\disc.png" />
+    <Content Include="ht\images\img\gCons\dollar.png" />
+    <Content Include="ht\images\img\gCons\download.png" />
+    <Content Include="ht\images\img\gCons\edit.png" />
+    <Content Include="ht\images\img\gCons\email.png" />
+    <Content Include="ht\images\img\gCons\fan.png" />
+    <Content Include="ht\images\img\gCons\fancy-globe.png" />
+    <Content Include="ht\images\img\gCons\female-user.png" />
+    <Content Include="ht\images\img\gCons\fire.png" />
+    <Content Include="ht\images\img\gCons\first-aid.png" />
+    <Content Include="ht\images\img\gCons\flag.png" />
+    <Content Include="ht\images\img\gCons\flower.png" />
+    <Content Include="ht\images\img\gCons\full-screen.png" />
+    <Content Include="ht\images\img\gCons\glasses.png" />
+    <Content Include="ht\images\img\gCons\globe.png" />
+    <Content Include="ht\images\img\gCons\happy-face.png" />
+    <Content Include="ht\images\img\gCons\headphone.png" />
+    <Content Include="ht\images\img\gCons\heart.png" />
+    <Content Include="ht\images\img\gCons\home.png" />
+    <Content Include="ht\images\img\gCons\ID.png" />
+    <Content Include="ht\images\img\gCons\ipod.png" />
+    <Content Include="ht\images\img\gCons\lab.png" />
+    <Content Include="ht\images\img\gCons\lady.png" />
+    <Content Include="ht\images\img\gCons\lamp.png" />
+    <Content Include="ht\images\img\gCons\leaves.png" />
+    <Content Include="ht\images\img\gCons\light.png" />
+    <Content Include="ht\images\img\gCons\line-globe.png" />
+    <Content Include="ht\images\img\gCons\lookup.png" />
+    <Content Include="ht\images\img\gCons\male-user.png" />
+    <Content Include="ht\images\img\gCons\microphone.png" />
+    <Content Include="ht\images\img\gCons\mobile.png" />
+    <Content Include="ht\images\img\gCons\mobile2.png" />
+    <Content Include="ht\images\img\gCons\mouse.png" />
+    <Content Include="ht\images\img\gCons\multi-agents.png" />
+    <Content Include="ht\images\img\gCons\music-node.png" />
+    <Content Include="ht\images\img\gCons\network-pc.png" />
+    <Content Include="ht\images\img\gCons\network.png" />
+    <Content Include="ht\images\img\gCons\next-item.png" />
+    <Content Include="ht\images\img\gCons\phone.png" />
+    <Content Include="ht\images\img\gCons\pie-chart.png" />
+    <Content Include="ht\images\img\gCons\pin.png" />
+    <Content Include="ht\images\img\gCons\plane.png" />
+    <Content Include="ht\images\img\gCons\print.png" />
+    <Content Include="ht\images\img\gCons\processing-02.png" />
+    <Content Include="ht\images\img\gCons\processing.png" />
+    <Content Include="ht\images\img\gCons\push-pin.png" />
+    <Content Include="ht\images\img\gCons\recycle-empty.png" />
+    <Content Include="ht\images\img\gCons\recycle-full.png" />
+    <Content Include="ht\images\img\gCons\reload.png" />
+    <Content Include="ht\images\img\gCons\rss.png" />
+    <Content Include="ht\images\img\gCons\satellite.png" />
+    <Content Include="ht\images\img\gCons\save.png" />
+    <Content Include="ht\images\img\gCons\scale.png" />
+    <Content Include="ht\images\img\gCons\Scissors.png" />
+    <Content Include="ht\images\img\gCons\screen.png" />
+    <Content Include="ht\images\img\gCons\search.png" />
+    <Content Include="ht\images\img\gCons\server.png" />
+    <Content Include="ht\images\img\gCons\shield.png" />
+    <Content Include="ht\images\img\gCons\shut-down.png" />
+    <Content Include="ht\images\img\gCons\star.png" />
+    <Content Include="ht\images\img\gCons\tag.png" />
+    <Content Include="ht\images\img\gCons\tap.png" />
+    <Content Include="ht\images\img\gCons\tree.png" />
+    <Content Include="ht\images\img\gCons\umbrella.png" />
+    <Content Include="ht\images\img\gCons\unlock.png" />
+    <Content Include="ht\images\img\gCons\usb.png" />
+    <Content Include="ht\images\img\gCons\van.png" />
+    <Content Include="ht\images\img\gCons\wifi.png" />
+    <Content Include="ht\images\img\gCons\world.png" />
+    <Content Include="ht\images\img\main_bg.gif" />
+    <Content Include="ht\images\img\main_bg_right.gif" />
+    <Content Include="ht\images\img\poster.jpg" />
+    <Content Include="ht\images\img\sidebar_switch.png" />
+    <Content Include="ht\images\img\spinner_arrows.gif" />
+    <Content Include="ht\images\img\splashy\splashy.css" />
+    <Content Include="ht\images\img\splashy\splashy.png" />
+    <Content Include="ht\images\img\ui.totop.png" />
+    <Content Include="ht\images\img\user_avatar.png" />
+    <Content Include="ht\images\img\vid_local.png" />
+    <Content Include="ht\images\img\vid_vimeo.png" />
+    <Content Include="ht\images\img\vid_yt.png" />
+    <Content Include="ht\images\img\vimeo.png" />
+    <Content Include="ht\images\listbanner.png" />
+    <Content Include="ht\images\listicon1.png" />
+    <Content Include="ht\images\listicon2.png" />
+    <Content Include="ht\images\listicon3.png" />
+    <Content Include="ht\images\logboxbg.png" />
+    <Content Include="ht\images\logbtn.png" />
+    <Content Include="ht\images\loginicon.png" />
+    <Content Include="ht\images\login_bg.png" />
+    <Content Include="ht\images\loglogo.png" />
+    <Content Include="ht\images\logo.png" />
+    <Content Include="ht\images\on_bg.png" />
+    <Content Include="ht\images\righticon.png" />
+    <Content Include="ht\images\right_bor.png" />
+    <Content Include="ht\images\right_h.png" />
+    <Content Include="ht\images\r_down.png" />
+    <Content Include="ht\images\secshadow.png" />
+    <Content Include="ht\images\tableicon.png" />
+    <Content Include="ht\images\theadbg.png" />
+    <Content Include="ht\images\underline.png" />
+    <Content Include="ht\images\under_btn.png" />
+    <Content Include="ht\js\bootBasics.min.js" />
+    <Content Include="ht\js\bootstrap.plugins.min.js" />
+    <Content Include="ht\js\forms\jquery.autosize.js" />
+    <Content Include="ht\js\forms\jquery.autosize.min.js" />
+    <Content Include="ht\js\forms\jquery.counter.min.js" />
+    <Content Include="ht\js\forms\jquery.inputmask.min.js" />
+    <Content Include="ht\js\forms\jquery.progressbar.anim.js" />
+    <Content Include="ht\js\forms\jquery.spinners.min.js" />
+    <Content Include="ht\js\forms\jquery.ui.touch-punch.min.js" />
+    <Content Include="ht\js\gebo_calendar.js" />
+    <Content Include="ht\js\gebo_charts.js" />
+    <Content Include="ht\js\gebo_chat.js" />
+    <Content Include="ht\js\gebo_common.js" />
+    <Content Include="ht\js\gebo_dashboard.js" />
+    <Content Include="ht\js\gebo_datatables.js" />
+    <Content Include="ht\js\gebo_explorer.js" />
+    <Content Include="ht\js\gebo_floating_header.js" />
+    <Content Include="ht\js\gebo_forms.js" />
+    <Content Include="ht\js\gebo_gallery.js" />
+    <Content Include="ht\js\gebo_icons.js" />
+    <Content Include="ht\js\gebo_mailbox.js" />
+    <Content Include="ht\js\gebo_maps.js" />
+    <Content Include="ht\js\gebo_notifications.js" />
+    <Content Include="ht\js\gebo_search.js" />
+    <Content Include="ht\js\gebo_tables.js" />
+    <Content Include="ht\js\gebo_user_profile.js" />
+    <Content Include="ht\js\gebo_user_static.js" />
+    <Content Include="ht\js\gebo_validation.js" />
+    <Content Include="ht\js\gebo_widgets.js" />
+    <Content Include="ht\js\gebo_wizard.js" />
+    <Content Include="ht\js\gmap3.min.js" />
+    <Content Include="ht\js\highcharts.js" />
+    <Content Include="ht\js\ie\html5.js" />
+    <Content Include="ht\js\ie\respond.min.js" />
+    <Content Include="ht\js\ios-orientationchange-fix.js" />
+    <Content Include="ht\js\jquery.actual.min.js" />
+    <Content Include="ht\js\jquery.cookie.min.js" />
+    <Content Include="ht\js\jquery.debouncedresize.min.js" />
+    <Content Include="ht\js\jquery.easing.1.3.min.js" />
+    <Content Include="ht\js\jquery.imagesloaded.min.js" />
+    <Content Include="ht\js\jquery.mediaTable.min.js" />
+    <Content Include="ht\js\jquery.min.js" />
+    <Content Include="ht\js\jquery.peity.min.js" />
+    <Content Include="ht\js\jquery.wookmark.js" />
+    <Content Include="ht\js\selectNav.js" />
+    <Content Include="ht\Login.aspx" />
+    <Content Include="ht\Main.aspx" />
+    <Content Include="ht\right.aspx" />
+    <Content Include="ht\scripts\calendar.js" />
+    <Content Include="ht\scripts\jquery\jquery-1.3.2.min.js" />
+    <Content Include="ht\scripts\jquery\jquery.form.js" />
+    <Content Include="ht\scripts\jquery\jquery.Jcrop.min.js" />
+    <Content Include="ht\scripts\jquery\jquery.jqzoom.js" />
+    <Content Include="ht\scripts\jquery\jquery.KinSlideshow-1.2.1.min.js" />
+    <Content Include="ht\scripts\jquery\jquery.metadata.js" />
+    <Content Include="ht\scripts\jquery\jquery.pagination.js" />
+    <Content Include="ht\scripts\jquery\jquery.validate.min.js" />
+    <Content Include="ht\scripts\jquery\messages_cn.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\calendar.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\config.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\lang\en.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\default\img.gif" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\WdatePicker.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\readme.txt" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="ht\scripts\jquery\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="ht\scripts\My97DatePicker\calendar.js" />
+    <Content Include="ht\scripts\My97DatePicker\config.js" />
+    <Content Include="ht\scripts\My97DatePicker\lang\en.js" />
+    <Content Include="ht\scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="ht\scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="ht\scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="ht\scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="ht\scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="ht\scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="ht\scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="ht\scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\readme.txt" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="ht\scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="ht\scripts\swfupload\swfupload.handlers.js" />
+    <Content Include="ht\scripts\swfupload\swfupload.js" />
+    <Content Include="ht\scripts\swfupload\swfupload.queue.js" />
+    <Content Include="ht\scripts\swfupload\swfupload.swf" />
+    <Content Include="ht\scripts\ui\js\ligerBuild.min.js" />
+    <Content Include="ht\scripts\ui\js\ligerBuild.source.js" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-all.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-common.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-dialog.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-form.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-grid.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-layout.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-menu.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-tab.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\css\ligerui-tree.css" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-done.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-error.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-l-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-l.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-question.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-r-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-r.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn-warn.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-btn.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-close-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-close.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-lefttop.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-righttop.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\box-top.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\box\tabs-item-left-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\common\loading.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-bc.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-bl.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-br.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-button.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-button.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-cl.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-close.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-cr.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-done.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-error.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-icons.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-question.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-tc.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-title-icon.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-tl.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-tr.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\dialog-warn.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\ie6\dialog-bc.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\ie6\dialog-cl.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\ie6\dialog-cr.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\dialog\ie6\dialog-tc.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\form\verify-corner.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\box-lefttop.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\box-righttop.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-checkbox-checked.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-checkbox.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-detail-close.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-detail-open.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-line.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-tree-close.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\grid-tree-open.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\header-bg-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\header-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\header2-bg.jpg" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\loading.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\popup-line.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\popup-row-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\grid\popup-row-over.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\bar-button-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\checkbox-checked.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\checkbox.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-close-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-close.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-close18X18.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-done.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-down.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-drop.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-edited.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-first.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-last.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-line.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-load.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-load.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-milestone.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-next.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-prev.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-remark15X15.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-sort-asc.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-sort-desc.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-up.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\icon-warn.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\icon\magnifier.png" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\accordion-content.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\accordion-header-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\accordion-header.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\layout-header-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\layout-header.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\layout-sidebar-header.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\mini-bottom.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\mini-left.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\mini-right.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\mini-top.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\panel-content.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\panel-header-over.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\panel-header.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-item-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-tools.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\layout\togglebar.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-item-arrow.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-item-down.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-item-over-l.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-item-over-m.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-item-over-r.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-line-x.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\menu\menu-line-y.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\bar-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\header-bg.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\header-bg.jpg" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\header2-bg.jpg" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-btn-l.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-btn-r.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-btn.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-header.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-menu-item-down.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-menu.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-menu.jpg" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-toolbar.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-toolbar.jpg" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-tools-sprites.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\panel\panel-tools.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\folder-open.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\folder.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\loading.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-leaf.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-level.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-noline.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-status-close.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-status-open.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree-status.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree.gif" />
+    <Content Include="ht\scripts\ui\skins\Aqua\images\tree\tree.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ht\foot.aspx.cs">
+      <DependentUpon>foot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\foot.aspx.designer.cs">
+      <DependentUpon>foot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\head.aspx.cs">
+      <DependentUpon>head.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\head.aspx.designer.cs">
+      <DependentUpon>head.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\right.aspx.cs">
+      <DependentUpon>right.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\right.aspx.designer.cs">
+      <DependentUpon>right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptHandler.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="WebHelper.cs" />
+    <Compile Include="webHeper\CacheHelper.cs" />
+    <Compile Include="webHeper\DESEncrypt.cs" />
+    <Compile Include="webHeper\DownLoad.cs" />
+    <Compile Include="webHeper\DTEnums.cs" />
+    <Compile Include="webHeper\DTKeys.cs" />
+    <Compile Include="webHeper\DTMail.cs" />
+    <Compile Include="webHeper\DTRequest.cs" />
+    <Compile Include="webHeper\PageTemplate.cs" />
+    <Compile Include="webHeper\PagingHelper.cs" />
+    <Compile Include="webHeper\SerializationHelper.cs" />
+    <Compile Include="webHeper\UpLoad.cs" />
+    <Compile Include="webHeper\Utils.cs" />
+    <Compile Include="webHeper\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ht\scripts\ui\skins\Aqua\images\common\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\dialog\ie6\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\dialog\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\form\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\grid\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\icon\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\layout\tab.psd" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\layout\tabs-tools.psd" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\layout\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\menu\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\panel\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\tree\Thumbs.db" />
+    <None Include="ht\scripts\ui\skins\Aqua\images\tree\tree.psd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16022</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.dll
+E:\ccjzpx\cczjpx\cczjpx\bin\cczjpx.pdb
+E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.dll
+E:\ccjzpx\cczjpx\cczjpx\obj\Debug\cczjpx.pdb
