@@ -28,7 +28,7 @@
 					<span id="currentNav"></span>
 			</div>
 			<div class="list0">
-				<iframe id="left" name="left" src="../Anysis/Alert.html" style="width: 100%; min-height: 750px" marginwidth="0" marginheight="0"  frameborder="0" onload='IFrameReSize("left");IFrameReSizeWidth("mainFrame");'></iframe>
+				<iframe id="left" name="left" src="" style="width: 100%; min-height: 750px" marginwidth="0" marginheight="0"  frameborder="0" ></iframe>
 <%--				<iframe src="Main.htm" scrolling="no" frameborder="0" height="100%" id="mainFrame" width="100%" onload='IFrameReSize("mainFrame");IFrameReSizeWidth("mainFrame");'></iframe>--%>
 			</div>
 		</div>

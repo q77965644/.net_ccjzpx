@@ -9,7 +9,7 @@ using System.Data;
 using myClass;
 
 
-namespace YiJiaBossNew
+namespace cczjpx
 {
     /// <summary>
     /// 数据访问抽象基础类

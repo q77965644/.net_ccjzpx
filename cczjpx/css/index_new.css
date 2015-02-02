@@ -1,0 +1,270 @@
+﻿body, div
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    /*background: -webkit-linear-gradient(yellow,orange,red,green,blue,purple);
+    background: -moz-linear-gradient( top,#ccc,#000);*/
+}
+
+#posterLayor
+{
+    width: 100%;
+    text-align: center;
+    /*background: url("/images/bg.jpg");*/
+    height: 300px;
+    padding: 14px 0px 20px 0px;
+    margin-top: -2px;
+}
+
+/*.top_menu {
+    margin:0px;
+    width:960px;
+}
+    .top_menu li {
+        list-style:none;
+        float:left;
+        width:150px;
+        height:35px;
+        line-height:35px;
+        color:#fff;
+        font-family:Arial;
+        font-size:20px;
+    }
+
+        /*.top_menu li:hover {
+            background-color:white;
+            color:black;
+        }*/
+
+/*.top_menu li a {
+            width:150px;
+            height:35px;
+            color:#fff;
+            text-decoration:none;
+        }
+            .top_menu li a:hover {
+                color:black;
+            }*/
+.tab_menu
+{
+    text-align: center;
+}
+
+#content
+{
+    text-align: center;
+}
+
+#banner
+{
+    margin: -2px auto 0px auto;
+}
+
+#tab_leftAdvert tr
+{
+    height: 30px;
+}
+
+.tab_news a
+{
+    color: #9c0305;
+}
+
+#Links
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#Links li
+{
+    list-style: none;
+    height: 55px;
+    width: 219px;
+    float: left;
+    margin: 6px;
+}
+
+#Links li img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*右边侧边栏部分*/
+.right_title
+{
+    width: 98%;
+    background: #9c0305;
+    height: 30px; /*line-height:30px;*/
+    color: white;
+    padding: 0px 2px;
+}
+
+.right_title .r_son_img, .right_title .r_son_title
+{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.right_title .r_son_img img
+{
+    margin: 9px 5px 0px 10px; /*line-height:30px;*/
+}
+
+.right_title .r_son_title
+{
+    text-align: left;
+    width: 51px;
+}
+
+.right_title .r_son_more
+{
+    height: 30px;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.right_title .r_son_more a
+{
+    color: white;
+}
+
+.right_con
+{
+    width: 98%;
+    border: 2px solid #9c0305;
+    height: 300px;
+}
+
+.right_con ul
+{
+    margin: 10px;
+    padding: 0px;
+}
+
+.right_con ul li
+{
+    text-align: left;
+    border-bottom: 1px dotted #9c0305;
+}
+
+.right_con ul li a
+{
+    color: black;
+}
+
+.left_img_title
+{
+    width: 100%;
+    background: #9c0305;
+    height: 39px;
+}
+
+.left_son_img, .left_son_title, .left_song_more
+{
+    height: 39px;
+    float: left;
+}
+
+.left_son_img
+{
+    width: 30px;
+}
+
+.left_son_title
+{
+    text-align: left;
+    width: 88%;
+    height: 39px;
+    line-height: 39px;
+    font-size: 18px;
+    color: white;
+}
+
+.left_song_more
+{
+    height: 39px;
+    line-height: 39px;
+}
+
+.left_song_more a
+{
+    color: white;
+}
+
+.top_logo
+{
+    width: 960px;
+    height: 94px;
+    margin-bottom: 2px;
+}
+
+
+
+/*内容页*/
+#content
+{
+    width: 100%;
+}
+
+#list
+{
+    margin: 30px;
+    padding: 0px;
+    list-style: none;
+    color: red;
+    font-size: 16px;
+}
+
+#tab_leftAdvert a
+{
+    color: white;
+}
+
+#list li
+{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #9c0305;
+    margin: 5px auto;
+}
+
+#list li img
+{
+    margin-top: 9px;
+}
+
+#list li img, #list li div
+{
+    float: left;
+}
+
+#list li .list_title
+{
+    width: 500px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#list li .list_title a
+{
+    color: black;
+}
+
+#banner_Left, #banner_right
+{
+    background: #f8f8f8;
+    opacity: 1;
+    position: absolute;
+    z-index: 9;
+    top: 132px;
+    width: 500px;
+    height: 332px;
+}
