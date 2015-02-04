@@ -68,7 +68,7 @@
 			<ul class="right_ul" id="menu">
 			
 						<li>
-							<img src="images/righticon.png" width="10" height="10" alt="" /><span><a onclick="window.parent.parent.parent.left.location='gType/edit.aspx';">信息类别管理</a></span>
+							<img src="images/righticon.png" width="10" height="10" alt="" /><span><a onclick="window.parent.parent.parent.left.location='gType/list.aspx';">信息类别管理</a></span>
                             </li>		
 			</ul>
 

@@ -4,105 +4,136 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
+using System.Collections;
+using System.Data;
 
 namespace cczjpx.ht.gType
 {
     public partial class list : System.Web.UI.Page
     {
-        protected string keywords = string.Empty;
-        protected int page;
-        protected int pageSize;
-        protected int totalCount;
-        protected string menuId = string.Empty;
+        gTypeDAL dal = new gTypeDAL();
+        ArrayList Al_PageNum;
+        int PageSize;//每页显示数    
+        int RecordCount;//总记录数
+        int PageCount;//总页数
+        int CurrentPage;//当前页
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.keywords = DTRequest.GetQueryString("keywords");
-            this.menuId = DTRequest.GetQueryString("menuId");
-            this.pageSize = GetPageSize(15); //每页数量
+            PageSize = 15;
             if (!Page.IsPostBack)
             {
-                Session["SelectedStudentItem"] = null;
-                getPower();
-                RptBind(CombSqlTxt(this.keywords), " CreateTime desc");
+                //绑定
+                    page();
+                    ListBind();
             }
         }
 
-        private void getPower()
-        {
-            Com.Qinhan.Library.IntegrationPlatform_Mod.user_data user = Session["user"] as Com.Qinhan.Library.IntegrationPlatform_Mod.user_data;
-            if (user != null)
-            {
-                T_F_userRole model = helper.iuser_bll().GetRoleIdByUserId(user.UserID);
-                int? role_id = model.roleId;
-                var menu = helper.iuser_bll().GetMenuId(5, Convert.ToInt32(role_id));
-                foreach (var item in menu)
-                {
-                    if (item.nodeId == 1)
-                    {
-                        btnAdd.Visible = true;
-                    }
-                    else if (item.nodeId == 3)
-                    {
-                        btnEdit.Visible = true;
-                    }
-                    else if (item.nodeId == 4)
-                    {
-                        btnDelete.Visible = true;
-                    }
-                }
-            }
-        }
 
-        private void RptBind(string _strWhere, string _orderby)
+        public void ListBind()// GridView绑定
         {
+            int StartIndex;
+            StartIndex = CurrentPage * PageSize;
 
-            this.page = DTRequest.GetQueryInt("page", 1);
-            this.txtKeywords.Text = this.keywords;
-            rptList1.DataSource = helper.inews_bll().GetNewsList(this.pageSize, this.page, _strWhere, _orderby, out this.totalCount);
+
+            rptList1.DataSource = dal.GetNewsList(StartIndex, PageSize);
             rptList1.DataBind();
-            txtPageNum.Text = this.pageSize.ToString();
-            string pageUrl = Utils.CombUrlTxt("news_list.aspx", "keywords={0}&page={1}",
-                   this.keywords, "__id__");
-            PageContent.InnerHtml = Utils.OutPageList(this.pageSize, this.page, this.totalCount, pageUrl, 8);
+            lbnNextPage.Enabled = true;
+            lbnPrevPage.Enabled = true;
+            BtnFirst.Enabled = true;
+            BtnLast.Enabled = true;
+            if (PageCount == 0)
+            {
+                lblCurrentPage.Text = "0";
+                lbnNextPage.Enabled = false;
+                lbnPrevPage.Enabled = false;
+                BtnFirst.Enabled = false;
+                BtnLast.Enabled = false;
+            }
+            else
+            {
+                if (CurrentPage == (PageCount - 1)) lbnNextPage.Enabled = false;
+                if (CurrentPage == 0) lbnPrevPage.Enabled = false;
+                lblCurrentPage.Text = (CurrentPage + 1).ToString();
+            }
+            Ddl_PageNumber.Text = lblCurrentPage.Text;
         }
 
-        protected string CombSqlTxt(string _keywords)
+        private void page()
         {
-            StringBuilder strTemp = new StringBuilder();
-            _keywords = _keywords.Replace("'", "");
-            if (!string.IsNullOrEmpty(_keywords))
-            {
-                strTemp.Append(" and a.NewsTitle  like '%" + _keywords + "%'");
-            }
-            return strTemp.ToString();
+
+            RecordCount = dal.GetCount(); ;
+            PageCount = RecordCount / PageSize; //计算总共有多少页
+            if (RecordCount % PageSize > 0)     //取整 
+                PageCount = PageCount + 1;
+            lblPageCount.Text = PageCount.ToString();
+            lblRecordCount.Text = RecordCount.ToString();
+            ViewState["PageCount"] = PageCount;
+            CurrentPage = 0;
+            ViewState["PageIndex"] = 0;
+
+            Al_PageNum = new ArrayList();//绑定DROPDOWNLIST
+            for (int i = 1; i <= PageCount; i++)   //从1开始循环，为了不出现0页码
+                Al_PageNum.Add(i.ToString());
+            if (Al_PageNum.Count == 0)
+                Al_PageNum.Add("0");
+            Ddl_PageNumber.DataSource = Al_PageNum;
+            Ddl_PageNumber.DataBind();
         }
 
-        private int GetPageSize(int _default_size)
+        public void Page_OnClick(Object sender, CommandEventArgs e)
         {
-            int _pagesize;
-            if (int.TryParse(Utils.GetCookie("news_page_size"), out _pagesize))
+            CurrentPage = (int)ViewState["PageIndex"];
+            PageCount = (int)ViewState["PageCount"];
+            string cmd = e.CommandName;                 //判断cmd，以判定翻页方向
+
+            switch (cmd)
             {
-                if (_pagesize > 0)
-                {
-                    return _pagesize;
-                }
+                case "next":
+                    if (CurrentPage < (PageCount - 1)) CurrentPage++;
+                    break;
+                case "prev":
+                    if (CurrentPage > 0) CurrentPage--;
+                    break;
+                case "Last":
+                    CurrentPage = (PageCount - 1);
+                    break;
+                default:
+                    CurrentPage = 0;
+                    break;
             }
-            return _default_size;
+
+            ViewState["PageIndex"] = CurrentPage;
+            ListBind();
         }
 
-        protected void txtPageNum_TextChanged(object sender, EventArgs e)
+        public void PageNum_SelectIndexChanged(object sender, System.EventArgs e)
         {
-            int _pagesize;
-            if (int.TryParse(txtPageNum.Text.Trim(), out _pagesize))
-            {
-                if (_pagesize > 0)
-                {
-                    Utils.WriteCookie("news_page_size", _pagesize.ToString(), 43200);
-                }
-            }
-            Response.Redirect(Utils.CombUrlTxt("news_list.aspx", "keywords={0}",
-                   this.keywords));
+            ViewState["PageIndex"] = int.Parse(Ddl_PageNumber.SelectedItem.Value) - 1;//保持不出现0页码
+            PageSize = 15;
+            CurrentPage = (int)ViewState["PageIndex"];
+            PageCount = (int)ViewState["PageCount"];
+            ListBind();
         }
+
+        override protected void OnInit(EventArgs e)
+        {
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        private void InitializeComponent()
+        {
+            this.Load += new System.EventHandler(this.Page_Load);
+            this.Ddl_PageNumber.SelectedIndexChanged += new System.EventHandler(this.PageNum_SelectIndexChanged);
+        }
+     
+
+
+
+     
+
+       
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
@@ -132,20 +163,18 @@ namespace cczjpx.ht.gType
                 }
                 for (int a = 0; a < rptList1.Items.Count; a++)
                 {
-                    DateTime dt = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     string news_id = ((HiddenField)rptList1.Items[a].FindControl("hidId")).Value.ToString();
                     CheckBox cb = (CheckBox)rptList1.Items[a].FindControl("chkId");
                     if (cb.Checked)
                     {
-                        helper.inews_bll().UpdateIsdelete(news_id, "1", dt);
+                        dal.Delete(Convert.ToInt32(news_id));
                     }
                 }
-                ScriptHandler.AlertAndRedirect("批量删除成功", Utils.CombUrlTxt("news_list.aspx", "keywords={0}",
-                    this.keywords));
+                ScriptHandler.AlertAndRedirect("批量删除成功","list.aspx");
             }
             else
             {
-                ScriptHandler.AlertAndRedirect("请至少选中一条记录", "news_list.aspx");
+                ScriptHandler.AlertAndRedirect("请至少选中一条记录", "list.aspx");
             }
         }
 
@@ -171,16 +200,16 @@ namespace cczjpx.ht.gType
                 }
                 if (_id.Split(',').Length == 1)
                 {
-                    Response.Redirect("news_edit.aspx?action=" + Com.Qinhan.Library.Web.Handler.DTEnums.OperationEnum.Edit + "&newsid=" + _id + "");
+                    Response.Redirect("edit.aspx?id=" + _id + "");
                 }
                 else
                 {
-                    ScriptHandler.AlertAndRedirect("请选中一条记录", "news_list.aspx");
+                    ScriptHandler.AlertAndRedirect("请选中一条记录", "list.aspx");
                 }
             }
             else
             {
-                ScriptHandler.AlertAndRedirect("请选中一条记录", "news_list.aspx");
+                ScriptHandler.AlertAndRedirect("请选中一条记录", "list.aspx");
             }
         }
     }

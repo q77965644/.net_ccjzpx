@@ -622,6 +622,38 @@ namespace cczjpx
         #region 执行带参数的SQL语句
 
         /// <summary>
+        /// 执行查询语句，返回DataSet
+        /// </summary>
+        /// <param name="SQLString">查询语句</param>
+        /// <returns>DataSet</returns>
+        /// 
+
+        public static DataSet Query(string SQLString, int StartIndex, int PageSize)//新增分页方法
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                DataSet ds = new DataSet();
+                try
+                {
+                    connection.Open();
+                    MySqlDataAdapter command = new MySqlDataAdapter(SQLString, connection);
+                    command.Fill(ds, StartIndex, PageSize, "ds");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                return ds;
+            }
+        }
+
+
+
+        /// <summary>
         /// 执行SQL语句，返回影响的记录数
         /// </summary>
         /// <param name="SQLString">SQL语句</param>

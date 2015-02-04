@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Text;
+using MySql.Data.MySqlClient;
 namespace cczjpx
 {
     public class gTypeDAL
@@ -12,20 +13,29 @@ namespace cczjpx
         /// <summary>
         /// 获取新闻列表
         /// </summary>
-        public DataSet GetNewsList(int pageSize, int pageIndex, string strWhere, string filedOrder, out int recordCount)
+        public DataSet GetNewsList(int StartIndex,int PageSize)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select a.NewsID,a.NewsTitle,a.NewsContent,a.CreateTime,a.UpdateTime,a.clicknum,");
-            strSql.Append("b.UserLastName as creater,c.UserLastName as updater");
-            strSql.Append("  from T_B_NewsInfo a,T_U_UserInfo b,T_U_UserInfo c");
-            strSql.Append("  where a.Creator=b.UserID and a.UpdateUserID=c.UserID and a.isdelete='0' ");
-            if (strWhere.Trim() != "")
-            {
-                strSql.Append(" " + strWhere);
-            }
-            recordCount = Convert.ToInt32(DbHelperMySQL.GetSingle(PagingHelper.CreateCountingSql(strSql.ToString())));
-            return DbHelperMySQL.Query(PagingHelper.CreatePagingSql(recordCount, pageSize, pageIndex, strSql.ToString(), filedOrder));
+            strSql.Append("select ID,TypeName ");
+            strSql.Append("   from gtype");
+            strSql.Append("  where IsDelete='0' ");
+            return DbHelperMySQL.Query(strSql.ToString(), StartIndex, PageSize);
         }
+
+        public int GetCount()
+        {
+            int intCount=0;
+            string sql = "select ID,TypeName from gtype  where IsDelete='0' ";
+
+            MySqlDataReader dr = DbHelperMySQL.ExecuteReader(sql);
+            if (dr.Read())
+                intCount = Int32.Parse(dr["co"].ToString());
+
+            dr.Close();
+
+            return intCount;
+        }
+
 
         public DataTable GetList()
         {

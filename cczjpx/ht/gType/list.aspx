@@ -68,15 +68,12 @@
                 <tbody>
                     <tr>
                         <td style="text-align: center" height="24" class="Txt_center">
-                            <asp:CheckBox ID="chkId" runat="server" /><asp:HiddenField ID="hidId" Value='<%#Eval("NewsID")%>' runat="server" />
+                            <asp:CheckBox ID="chkId" runat="server" /><asp:HiddenField ID="hidId" Value='<%#Eval("ID")%>' runat="server" />
                         </td>
                         <td style="text-align: center" height="24" class="Txt_center"><%#Eval("NewsTitle")%></td>
                         <%--<td style="text-align: center" height="24" class="Txt_center"><%#Eval("NewsContent")%></td>--%>
-                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("CreateTime")%></td>
-                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("creater")%></td>
-                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("updatetime")%></td>
-                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("updater")%></td>
-                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("clicknum")%></td>
+                        <td style="text-align: center" height="24" class="Txt_center"><%#Eval("TypeName")%></td>
+
                         <td style="text-align: center" height="24" class="Txt_center"><a href="infomation_show.aspx?&type=new&id=<%#Eval("NewsID")%>">查看</td>
 
                     </tr>
@@ -90,13 +87,22 @@
             </FooterTemplate>
         </asp:Repeater>
         <!--内容底部-->
-        <div class="line20"></div>
-        <div class="pagelist">
-            <div class="l-btns">
-                <span>显示</span><asp:TextBox ID="txtPageNum" runat="server" CssClass="pagenum" onkeydown="return checkNumber(event);" OnTextChanged="txtPageNum_TextChanged" AutoPostBack="True"></asp:TextBox><span>条/页</span>
-            </div>
-            <div id="PageContent" runat="server" class="default"></div>
-        </div>
+        <div class="line20"></div>			<div class="Teacher_list_down">                共有<asp:Label ID="lblRecordCount" runat="server" ForeColor="red"></asp:Label>条记录
+                当前为<asp:Label ID="lblCurrentPage" runat="server" ForeColor="Red"></asp:Label>/
+                <asp:Label ID="lblPageCount" runat="server" ForeColor="Red"></asp:Label>页 &nbsp;
+                <asp:DropDownList ID="Ddl_PageNumber" runat="server" AutoPostBack="true" CssClass="lanyu">
+                </asp:DropDownList>
+                <asp:LinkButton ID="BtnFirst" runat="server" Text="首页" OnCommand="Page_OnClick" CommandName="First"
+                    Font-Size="10pt">首页</asp:LinkButton>
+                <asp:LinkButton ID="lbnPrevPage" runat="server" CommandName="prev" OnCommand="Page_OnClick"
+                    Text="上一页" Font-Size="10pt"></asp:LinkButton>&nbsp;
+                <asp:LinkButton ID="lbnNextPage" runat="server" CommandName="next" OnCommand="Page_OnClick"
+                    Text="下一页" Font-Size="10pt"></asp:LinkButton>
+                <asp:LinkButton ID="BtnLast" OnCommand="Page_OnClick" CommandName="Last" Text="尾页"
+                    runat="server" Font-Size="10pt">尾页</asp:LinkButton></div>
+		
+ 
+
         <!--/内容底部-->
 
     </form>
