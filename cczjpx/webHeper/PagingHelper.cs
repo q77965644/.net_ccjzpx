@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookWeb
+namespace cczjpx
 {
     /// <summary>  
     /// 双TOP二分法生成分页SQL类(支持MSSQL、ACCESS)

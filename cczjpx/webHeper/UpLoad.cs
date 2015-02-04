@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Configuration;
 
-namespace BookWeb
+namespace cczjpx
 {
     public class UpLoad
     {

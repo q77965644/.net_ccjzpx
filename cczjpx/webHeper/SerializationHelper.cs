@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace BookWeb
+namespace cczjpx
 {
     public class SerializationHelper
     {

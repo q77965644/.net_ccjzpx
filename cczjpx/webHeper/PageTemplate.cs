@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections;
 
-namespace BookWeb
+namespace cczjpx
 {
     /// <summary>
     /// Template为页面模板类.

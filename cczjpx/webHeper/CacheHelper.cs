@@ -4,7 +4,7 @@ using System.Text;
 using System.Web;
 using System.Web.Caching;
 
-namespace BookWeb
+namespace cczjpx
 {
     public class CacheHelper
     {

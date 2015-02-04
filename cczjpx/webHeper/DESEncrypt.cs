@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace BookWeb
+namespace cczjpx
 {
     /// <summary>
     /// DES加密/解密类。

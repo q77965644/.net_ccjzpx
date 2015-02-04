@@ -6,7 +6,7 @@ using System.IO;
 using System.Web;
 using System.Net.Mail;
 
-namespace BookWeb
+namespace cczjpx
 {
     public class DTMail
     {

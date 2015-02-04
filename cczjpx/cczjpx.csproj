@@ -59,7 +59,6 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="css\img\1.png" />
     <Content Include="css\img\2.png" />
     <Content Include="css\img\leftShadow.png" />
@@ -69,8 +68,6 @@
     <Content Include="css\index_new.css" />
     <Content Include="css\posterTvGrid.css" />
     <Content Include="css\talk99.css" />
-=======
->>>>>>> 7dfa6ee16517b5d06dda7fbcaa8245634e39efed
     <Content Include="Global.asax" />
     <Content Include="ht\css\Basics.css" />
     <Content Include="ht\css\blue.css" />
@@ -1078,7 +1075,6 @@
     <Compile Include="ht\right.aspx.designer.cs">
       <DependentUpon>right.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1086,8 +1082,6 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-=======
->>>>>>> 7dfa6ee16517b5d06dda7fbcaa8245634e39efed
     <Compile Include="mod\gtype.cs" />
     <Compile Include="mod\message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1124,13 +1118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-<<<<<<< HEAD
     <Folder Include="kindeditor-4.1.10\attached\file\20150130\" />
-=======
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Site.Master" />
->>>>>>> 7dfa6ee16517b5d06dda7fbcaa8245634e39efed
   </ItemGroup>
   <ItemGroup>
     <None Include="ht\scripts\ui\skins\Aqua\images\common\Thumbs.db" />

@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Web;
 
-namespace BookWeb
+namespace cczjpx
 {
 	/// <summary>
 	/// Request²Ù×÷Àà
