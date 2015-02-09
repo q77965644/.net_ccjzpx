@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="list.aspx.cs" Inherits="cczjpx.ht.gType.list" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="list.aspx.cs"  ValidateRequest="false" Inherits="cczjpx.ht.message.list" %>
+
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,9 +12,7 @@
     <script src="../../js/jquery-1.3.2.min.js" type="text/javascript"></script>
     <script src="../../js/jquery.validate.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <script type="text/javascript">
-
-    </script>
+  
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,7 +20,7 @@
         <p>
             <a href="edit.aspx" runat="server" id="btnAdd" class="btn04 fl ml20">新增</a>
             <asp:LinkButton ID="btnEdit" runat="server" OnClick="btnEdit_Click" class="btn05 fl ml12">修改</asp:LinkButton>
-            <asp:LinkButton ID="btnDelete" runat="server" OnClientClick="return confirm('你确定要删除吗？')"  OnClick="btnDelete_Click" class="btn07 fl ml12">删除</asp:LinkButton>
+            <asp:LinkButton ID="btnDelete" runat="server" OnClick="btnDelete_Click" class="btn07 fl ml12">删除</asp:LinkButton>
         </p>
         <p>
             <label class="serh">
@@ -38,11 +37,16 @@
                     <tr>
                         <th width="5%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
                             选择
-                        </td>
-                        <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
-                            类型名称
-                        </td>
-            
+                        </th>
+                         <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
+                            标题
+                        </th>
+                         <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
+                            创建时间
+                        </th>
+                         <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
+                            类别
+                        </th>
                     </tr>
                 </thead>
         </HeaderTemplate>
@@ -53,9 +57,16 @@
                         <asp:CheckBox ID="chkId" runat="server" /><asp:HiddenField ID="hidId" Value='<%#Eval("ID")%>'
                             runat="server" />
                     </td>
+                           <td style="text-align: center" height="24" class="Txt_center">
+                        <%#Eval("Title")%>
+                    </td>
+                     <td style="text-align: center" height="24" class="Txt_center">
+                        <%#Eval("CreatTime")%>
+                    </td>
                      <td style="text-align: center" height="24" class="Txt_center">
                         <%#Eval("TypeName")%>
                     </td>
+             
                 </tr>
             </tbody>
         </ItemTemplate>

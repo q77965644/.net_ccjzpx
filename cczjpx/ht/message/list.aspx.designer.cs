@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace cczjpx.ht.gType {
+namespace cczjpx.ht.message {
     
     
     public partial class list {

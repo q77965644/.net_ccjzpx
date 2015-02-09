@@ -9,10 +9,6 @@ namespace cczjpx
 {
     public class gTypeDAL
     {
-
-        /// <summary>
-        /// 获取新闻列表
-        /// </summary>
         public DataSet GetNewsList(int StartIndex,int PageSize)
         {
             StringBuilder strSql = new StringBuilder();
@@ -25,7 +21,7 @@ namespace cczjpx
         public int GetCount()
         {
             int intCount=0;
-            string sql = "select ID,TypeName from gtype  where IsDelete='0' ";
+            string sql = "select count(*) as co from gtype  where IsDelete='0' ";
 
             MySqlDataReader dr = DbHelperMySQL.ExecuteReader(sql);
             if (dr.Read())
@@ -43,9 +39,15 @@ namespace cczjpx
             return DbHelperMySQL.Query(sql).Tables[0];
         }
 
+        public DataTable GetList(string id)
+        {
+            string sql = "select ID,TypeName  from gtype where IsDelete='0' and id="+id+"";
+            return DbHelperMySQL.Query(sql).Tables[0];
+        }
+
         public int Add(gtype mod)
         {
-            string sql = "insert into gtype(TypeName)value('"+mod.TypeName+"')";
+            string sql = "insert into gtype(TypeName,IsDelete)value('" + mod.TypeName + "','0')";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 

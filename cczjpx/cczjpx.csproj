@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LitJSON.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="myClassLibrary, Version=10.9.13.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -346,6 +350,8 @@
     <Content Include="ht\js\selectNav.js" />
     <Content Include="ht\Login.aspx" />
     <Content Include="ht\Main.aspx" />
+    <Content Include="ht\message\edit.aspx" />
+    <Content Include="ht\message\list.aspx" />
     <Content Include="ht\right.aspx" />
     <Content Include="ht\scripts\calendar.js" />
     <Content Include="ht\scripts\jquery\jquery-1.3.2.min.js" />
@@ -1067,6 +1073,20 @@
     </Compile>
     <Compile Include="ht\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\message\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\message\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ht\message\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\message\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="ht\right.aspx.cs">
       <DependentUpon>right.aspx</DependentUpon>

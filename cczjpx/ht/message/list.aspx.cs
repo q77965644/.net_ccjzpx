@@ -8,11 +8,11 @@ using System.Text;
 using System.Collections;
 using System.Data;
 
-namespace cczjpx.ht.gType
+namespace cczjpx.ht.message
 {
     public partial class list : System.Web.UI.Page
     {
-        gTypeDAL dal = new gTypeDAL();
+        messageDAL dal = new messageDAL();
         ArrayList Al_PageNum;
         int PageSize;//每页显示数    
         int RecordCount;//总记录数
@@ -24,8 +24,8 @@ namespace cczjpx.ht.gType
             if (!Page.IsPostBack)
             {
                 //绑定
-                    page();
-                    ListBind();
+                page();
+                ListBind();
             }
         }
 
@@ -36,7 +36,7 @@ namespace cczjpx.ht.gType
             StartIndex = CurrentPage * PageSize;
 
 
-            rptList1.DataSource = dal.GetNewsList(StartIndex, PageSize);
+            rptList1.DataSource = dal.GetNewsList(StartIndex, PageSize,"");
             rptList1.DataBind();
             lbnNextPage.Enabled = true;
             lbnPrevPage.Enabled = true;
@@ -62,7 +62,7 @@ namespace cczjpx.ht.gType
         private void page()
         {
 
-            RecordCount = dal.GetCount(); ;
+            RecordCount = dal.GetCount(""); ;
             PageCount = RecordCount / PageSize; //计算总共有多少页
             if (RecordCount % PageSize > 0)     //取整 
                 PageCount = PageCount + 1;
@@ -163,7 +163,7 @@ namespace cczjpx.ht.gType
                         dal.Delete(Convert.ToInt32(news_id));
                     }
                 }
-                ScriptHandler.AlertAndRedirect("批量删除成功","list.aspx");
+                ScriptHandler.AlertAndRedirect("批量删除成功", "list.aspx");
             }
             else
             {

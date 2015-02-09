@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="edit.aspx.cs" Inherits="cczjpx.ht.gType.edit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="edit.aspx.cs" ValidateRequest="false" Inherits="cczjpx.edit" %>
 
 <!DOCTYPE html>
 
@@ -39,10 +39,27 @@
 
 
         <div class="form2dl">
-            <div style="width:20%; float:left; line-height:40px; text-align:center">类型名称</div>
+            <div style="width:20%; float:left; line-height:40px; text-align:center">标题</div>
             <div style="width:75%; float:left"><asp:TextBox ID="txt_title" runat="server" MaxLength="100" /></div>
         </div>
-
+                <div class="form2dl">
+            <div style="width:20%; float:left; line-height:40px; text-align:center">是否置顶</div>
+            <asp:DropDownList ID="ddlTop" runat="server">
+                <asp:ListItem Value="0">否</asp:ListItem>
+                <asp:ListItem Value="1">是</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+        <div class="form2dl">
+            <div style="width:20%; float:left; line-height:40px; text-align:center">类别</div>
+          <asp:DropDownList runat="server" ID="ddlType">
+            </asp:DropDownList>
+        </div>
+        <div class="form2dl">
+            <div style="width:20%; float:left; line-height:40px; text-align:center">内容</div>
+            <div style="width:75%; float:left">
+                <textarea id="txtContent" cols="100" rows="8" style="width: 100%; height: 500px; visibility: hidden; text-wrap:avoid; float:left" runat="server"></textarea>
+            </div>
+        </div>
         <div class="clear"></div>
         <div class="form2btn mt15">
             <asp:Button ID="btnSubmit" runat="server" Text="提交保存" CssClass="btnSubmit" 
