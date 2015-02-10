@@ -13,7 +13,8 @@ namespace cczjpx
         public DataSet GetNewsList(int StartIndex, int PageSize, string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select message.ID,message.Title,message.CreatTime,gtype.TypeName,message.IsDelete ");
+            strSql.Append("select message.ID,message.Title,message.CreatTime,gtype.TypeName,message.IsDelete, ");
+            strSql.Append(" case when Top=0 then '否' when Top=1 then '是' end as _Top");
             strSql.Append("   from message,gType");
             strSql.Append("  where message.IsDelete='0' and gType.Id=message.TypeID " + strWhere + " ");
             return DbHelperMySQL.Query(strSql.ToString(), StartIndex, PageSize);
@@ -42,7 +43,7 @@ namespace cczjpx
 
         public DataTable GetList(string id)
         {
-            string sql = "select ID,Title,CreatTime,gtype.TypeName,message.IsDelete  from message where IsDelete='0' and id=" + id + "";
+            string sql = "select ID,Title,CreatTime,Content,IsDelete,Top,TypeID  from message where IsDelete='0' and id='" + id + "'";
             return DbHelperMySQL.Query(sql).Tables[0];
         }
 
@@ -50,9 +51,9 @@ namespace cczjpx
         {
              string sql ="";
             if(top !="")
-                sql = "select  ID,Title,CreatTime,gtype.TypeName,message.IsDelete  from message,gtype where message.TypeID=gtype.Id and IsDelete='0' and message.top='" + top + "'  by afield limit 0, " + topNum + " ";
+                sql = "select  ID,Title,CreatTime from message,gtype where message.TypeID=gtype.Id and IsDelete='0' and message.top='" + top + "'  by afield limit 0, " + topNum + " ";
             else
-                sql = "select  ID,Title,CreatTime,gtype.TypeName,message.IsDelete  from message,gtype where message.TypeID=gtype.Id and IsDelete='0'  by afield limit 2, " + topNum + "";
+                sql = "select  ID,Title,CreatTime from message,gtype where message.TypeID=gtype.Id and IsDelete='0'  by afield limit 2, " + topNum + "";
             
 
             return DbHelperMySQL.Query(sql).Tables[0];
@@ -60,25 +61,25 @@ namespace cczjpx
 
         public int Add(message mod)
         {
-            string sql = "insert into message(ID,Title,CreatTime,content,IsDelete)value('" + Guid.NewGuid().ToString() + "','" + mod.Title + "','" + mod.DateTime + "','" + mod.Content + "','0')";
+            string sql = "insert into message(ID,Title,CreatTime,content,IsDelete,TypeID,Top)value('" + Guid.NewGuid().ToString() + "','" + mod.Title + "','" + mod.DateTime + "','" + mod.Content + "','0','" + mod.Type + "','" + mod.Top + "')";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 
         public int Update(message mod)
         {
-            string sql = "update message set Title='" + mod.Title + "',content='" + mod.Content + "' where id=" + mod.Id + "";
+            string sql = "update message set Title='" + mod.Title + "',content='" + mod.Content + "', TypeID='" + mod.Type + "',Top='"+mod.Top+"' where id='" + mod.Id + "'";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 
         public int UpdateTop(string top,string id)
         {
-            string sql = "update message set Top='" + top + "' where id=" + id + "";
+            string sql = "update message set Top='" + top + "' where id='" + id + "'";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
-            string sql = "update message set IsDelete='1' where id=" + id + "";
+            string sql = "update message set IsDelete='1' where id='" + id + "'";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
     }

@@ -160,7 +160,7 @@ namespace cczjpx.ht.message
                     CheckBox cb = (CheckBox)rptList1.Items[a].FindControl("chkId");
                     if (cb.Checked)
                     {
-                        dal.Delete(Convert.ToInt32(news_id));
+                        dal.Delete(news_id);
                     }
                 }
                 ScriptHandler.AlertAndRedirect("批量删除成功", "list.aspx");
@@ -194,6 +194,44 @@ namespace cczjpx.ht.message
                 if (_id.Split(',').Length == 1)
                 {
                     Response.Redirect("edit.aspx?id=" + _id + "");
+                }
+                else
+                {
+                    ScriptHandler.AlertAndRedirect("请选中一条记录", "list.aspx");
+                }
+            }
+            else
+            {
+                ScriptHandler.AlertAndRedirect("请选中一条记录", "list.aspx");
+            }
+        }
+
+        protected void btnTop_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            string _id = string.Empty;
+            foreach (RepeaterItem rpti in rptList1.Items)
+            {
+                CheckBox ckb = rpti.FindControl("chkId") as CheckBox;
+                if (ckb.Checked)
+                {
+                    HiddenField hid = rpti.FindControl("hidId") as HiddenField;
+                    _id = hid.Value.ToString() + "," + _id;
+                    i++;
+                }
+            }
+            if (i > 0)
+            {
+                if (_id.Length > 0)
+                {
+                    _id = _id.Remove(_id.LastIndexOf(","));
+                }
+                if (_id.Split(',').Length == 1)
+                {
+                    if(dal.UpdateTop("1",_id)>0)
+                    ScriptHandler.AlertAndRedirect("置顶成功", "list.aspx");
+                    else
+                     ScriptHandler.AlertAndRedirect("置顶失败", "list.aspx");
                 }
                 else
                 {

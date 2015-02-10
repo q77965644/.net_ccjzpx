@@ -20,6 +20,8 @@
         <p>
             <a href="edit.aspx" runat="server" id="btnAdd" class="btn04 fl ml20">新增</a>
             <asp:LinkButton ID="btnEdit" runat="server" OnClick="btnEdit_Click" class="btn05 fl ml12">修改</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" runat="server" class="btn06 fl ml12" 
+                onclick="btnTop_Click">置顶</asp:LinkButton>
             <asp:LinkButton ID="btnDelete" runat="server" OnClick="btnDelete_Click" class="btn07 fl ml12">删除</asp:LinkButton>
         </p>
         <p>
@@ -44,6 +46,9 @@
                          <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
                             创建时间
                         </th>
+                        <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
+                            是否置顶
+                        </th>
                          <th width="24%" height="30" class="Txt_cu Teacher_red Teacher_red_background">
                             类别
                         </th>
@@ -62,6 +67,9 @@
                     </td>
                      <td style="text-align: center" height="24" class="Txt_center">
                         <%#Eval("CreatTime")%>
+                    </td>
+                     <td style="text-align: center" height="24" class="Txt_center">
+                        <%#Eval("_Top")%>
                     </td>
                      <td style="text-align: center" height="24" class="Txt_center">
                         <%#Eval("TypeName")%>

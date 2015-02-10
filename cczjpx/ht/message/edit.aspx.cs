@@ -17,11 +17,13 @@ namespace cczjpx
         protected void Page_Load(object sender, EventArgs e)
         {
             id = DTRequest.GetQueryString("id");
-            DownList();
+     
             if (!IsPostBack)
             {
+                DownList();
                 if (!string.IsNullOrEmpty(id))
                 {
+    
                     GetShow();
                 }
             }
