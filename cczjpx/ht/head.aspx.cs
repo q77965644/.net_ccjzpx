@@ -15,7 +15,15 @@ namespace IntegrationPlatform_WebApp.NewPage
         {
             if (!IsPostBack)
             {
-                
+                try
+                {
+  
+                   lbl_Name.Text = "当前用户："  + Session["user"].ToString();  
+                }
+                catch (Exception)
+                {
+                    Response.Write("<script>window.parent.location='Login.aspx';</script>");
+                }
             }
         }
 

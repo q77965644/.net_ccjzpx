@@ -3,3 +3,4 @@ E:\.net_ccjzpx\cczjpx\bin\cczjpx.pdb
 E:\.net_ccjzpx\cczjpx\obj\Debug\cczjpx.dll
 E:\.net_ccjzpx\cczjpx\obj\Debug\cczjpx.pdb
 E:\.net_ccjzpx\cczjpx\bin\LitJSON.dll
+E:\.net_ccjzpx\cczjpx\obj\Debug\cczjpx.csprojResolveAssemblyReference.cache

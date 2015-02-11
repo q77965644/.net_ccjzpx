@@ -13,6 +13,7 @@ namespace cczjpx.ht.message
     public partial class list : System.Web.UI.Page
     {
         messageDAL dal = new messageDAL();
+        gTypeDAL gtypedal = new gTypeDAL();
         ArrayList Al_PageNum;
         int PageSize;//每页显示数    
         int RecordCount;//总记录数
@@ -25,10 +26,21 @@ namespace cczjpx.ht.message
             {
                 //绑定
                 page();
+                DownList();
                 ListBind();
             }
         }
 
+        private void DownList()
+        {
+            ddlType.DataSource = gtypedal.GetList();
+            ddlType.DataValueField = "id";
+            ddlType.DataTextField = "TypeName";
+            ddlType.DataBind();
+            ddlType.Items.Add("--请选择--");
+            ddlType.Items[this.ddlType.Items.Count - 1].Value = "";
+            ddlType.SelectedIndex = this.ddlType.Items.Count - 1;
+        }
 
         public void ListBind()// GridView绑定
         {

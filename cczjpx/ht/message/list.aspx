@@ -25,9 +25,13 @@
             <asp:LinkButton ID="btnDelete" runat="server" OnClick="btnDelete_Click" class="btn07 fl ml12">删除</asp:LinkButton>
         </p>
         <p>
-            <label class="serh">
-                关键字：</label>
-            <asp:TextBox ID="txtKeywords" runat="server" class="Wdate"></asp:TextBox>
+               <label  class="serh" >类别：</label>
+                 <asp:DropDownList runat="server" ID="ddlType" class="sersel2">
+            </asp:DropDownList>
+            <label class="serh">关键字：</label>
+            <asp:TextBox ID="txtKeywords" runat="server" class="Wdate" Width="200px"></asp:TextBox>
+
+     
             <asp:Button ID="btnSearch" runat="server" Text="搜 索" class="serbtn2" OnClick="btnSearch_Click" />
         </p>
     </div>

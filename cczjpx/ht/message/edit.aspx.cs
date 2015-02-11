@@ -41,7 +41,24 @@ namespace cczjpx
         }
 
           protected void btnSubmit_Click(object sender, EventArgs e)
-          {
+        {
+            if (ddlType.SelectedValue == "")
+            {
+                ScriptHandler.AlertAndRedirect("请选择信息类别", "edit.aspx");
+                return;
+            }
+            if (txt_title.Text == "")
+            {
+                ScriptHandler.AlertAndRedirect("请填写标题", "edit.aspx");
+                return;
+            }
+            if (txtContent.Value == "")
+            {
+                ScriptHandler.AlertAndRedirect("请填写内容", "edit.aspx");
+                return;
+            }
+               
+
             if (!string.IsNullOrEmpty(id))
             {
                 if (update() > 0)

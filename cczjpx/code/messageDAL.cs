@@ -61,13 +61,13 @@ namespace cczjpx
 
         public int Add(message mod)
         {
-            string sql = "insert into message(ID,Title,CreatTime,content,IsDelete,TypeID,Top)value('" + Guid.NewGuid().ToString() + "','" + mod.Title + "','" + mod.DateTime + "','" + mod.Content + "','0','" + mod.Type + "','" + mod.Top + "')";
+            string sql = "insert into message(ID,Title,CreatTime,content,IsDelete,TypeID,Top)value('" + Guid.NewGuid().ToString() + "','" + mod.Title + "','" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "','" + mod.Content + "','0','" + mod.Type + "','" + mod.Top + "')";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 
         public int Update(message mod)
         {
-            string sql = "update message set Title='" + mod.Title + "',content='" + mod.Content + "', TypeID='" + mod.Type + "',Top='"+mod.Top+"' where id='" + mod.Id + "'";
+            string sql = "update message set Title='" + mod.Title + "',content='" + mod.Content + "', TypeID='" + mod.Type + "',Top='" + mod.Top + "',CreatTime='" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") +"' where id='" + mod.Id + "'";
             return DbHelperMySQL.ExecuteMySql(sql);
         }
 

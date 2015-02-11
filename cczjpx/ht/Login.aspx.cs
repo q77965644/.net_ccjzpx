@@ -18,8 +18,7 @@ namespace IntegrationPlatform_WebApp.NewPage
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
-        
-
+            Response.Write("<script>window.parent.location='dl.aspx';</script>");
         }
     }
 }

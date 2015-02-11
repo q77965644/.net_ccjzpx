@@ -84,6 +84,7 @@
     <Content Include="ht\css\place.css" />
     <Content Include="ht\css\style.css" />
     <Content Include="ht\css\tamarillo.css" />
+    <Content Include="ht\dl.aspx" />
     <Content Include="ht\foot.aspx" />
     <Content Include="ht\gType\edit.aspx" />
     <Content Include="ht\gType\list.aspx" />
@@ -1031,6 +1032,13 @@
     <Compile Include="DbHelperMySQL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ht\dl.aspx.cs">
+      <DependentUpon>dl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ht\dl.aspx.designer.cs">
+      <DependentUpon>dl.aspx</DependentUpon>
     </Compile>
     <Compile Include="ht\foot.aspx.cs">
       <DependentUpon>foot.aspx</DependentUpon>
